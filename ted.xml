@@ -1,0 +1,24 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<DashboardData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<DlrProj>133.8</DlrProj>
+<LoVrmsTdy>122.1</LoVrmsTdy>
+<VrmsNowDsp>123.5</VrmsNowDsp>
+<DlrNow>0.08</DlrNow>
+<KWProj>1355</KWProj>
+<CurrentRate>0.0861</CurrentRate>
+<KwPeakTdy>6.34</KwPeakTdy>
+<KWMtd>161.345714</KWMtd>
+<DlrMtd>13.89190502</DlrMtd>
+<DlrPeakTdy>0.54</DlrPeakTdy>
+<KWNow>0.97</KWNow>
+<KWTdy>19.3683427</KWTdy>
+<HiVrmsMtd>145.5</HiVrmsMtd>
+<HiVrmsTdy>125.3</HiVrmsTdy>
+<DlrTdy>1.66763528</DlrTdy>
+<DlrPeakMtd>0.89</DlrPeakMtd>
+<timestamp>1276808968.4</timestamp>
+<LoVrmsMtd>118.8</LoVrmsMtd>
+<KwPeakMtd>10.39</KwPeakMtd>
+</DashboardData>

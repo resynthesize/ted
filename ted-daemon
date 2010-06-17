@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# To start the script automatically at bootup type the following command
+# update-rc.d ted-daemon defaults 99
+
+TEDUSER=brandon
+
+case $1 in
+   start)
+      #display to user that what is being started
+      echo "Starting ted-daemon.py"
+      #start the process and record record it's pid
+      /bin/su -c "~$TEDUSER/ted-daemon.py ~$TEDUSER/ted > /dev/null &" $TEDUSER
+      #output failure or success
+      if [[ $? -eq 0 ]]; then
+         echo "The process started successfully"
+      else
+         echo "The process failed to start"
+      fi
+   ;;
+
+   stop)
+      #display that we are stopping the process
+      echo "Stopping ted-daemon.py"
+      #stop the process using pid from start()
+      PID=`ps -ef | grep ted-daemon.py | grep -v grep | awk '{print $2}'`
+      kill $PID
+      #output success or failure
+      if [[ $? -eq 0 ]]; then
+         echo "The process stopped successfully"
+      else
+         echo "The process failed to stop"
+      fi
+   ;;   
+   *)                                                                                                                                                               
+       # show the options
+      echo "Usage: {start|stop}"
+   ;;         
+esac 
