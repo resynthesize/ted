@@ -1,0 +1,13 @@
+Collection of scripts to read data from the TED 1001 whole house meter
+(http://www.theenergydetective.com).  Most of the scripts originated
+from Micah Dowty (http://micah.navi.cx/) and were modified by me
+(Brandon Tallent <btallent@gmail.com> to work with my setup.  I am 
+reading from the TED 1001 onto a debian linux fileserver.  ted-daemon.py
+runs in the background and collects data from the TED RDU into a couple
+RRD databases.  A cron job runs update-graphs.sh every minute to 
+generate fresh graphs into the root apache web directory (/var/www 
+by default on debian) and a simple PHP script is available for
+viewing the graphs.  The ted-daemon.py script also writes 
+an XML file in the original TED Footprints DashboardData
+format so that other applications (Ted Toolbar for firefox for example)
+can read the data. 
